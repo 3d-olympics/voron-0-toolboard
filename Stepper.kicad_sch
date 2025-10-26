@@ -1664,9 +1664,9 @@
 		)
 		(uuid "9a4932d3-f640-445f-96a0-32715fb189cc")
 	)
-	(text "Ground CLK_IN if not using.\nSHUTDOWN and STANDBY should\nhave a pull-up if used; be grounded if not."
+	(text "Ground CLK_IN if not using.\n\nSHUTDOWN / ENN should have a pullup if use; be grounded if not.\n\nSTANDBY / STDBY should have a pullup if use; be grounded or floating if not.\n\nSorry, I forgot the ENN pullup!"
 		(exclude_from_sim no)
-		(at 88.9 102.87 0)
+		(at 92.964 106.934 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2196,7 +2196,7 @@
 		)
 		(uuid "cdaf0f34-3634-438b-8813-b95f9d2fe559")
 	)
-	(hierarchical_label "SHUTDOWN"
+	(hierarchical_label "ENN"
 		(shape input)
 		(at 114.3 100.33 180)
 		(effects
@@ -2464,25 +2464,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "182e05da-c7b5-4fdf-acf4-17e82ecd80bb")
 		(property "Reference" "C7"
-			(at 152.4 70.3412 90)
+			(at 152.4 69.8965 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 152.4 72.8781 90)
+		(property "Value" "0.1uF 25V"
+			(at 155.956 72.39 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 156.21 75.2348 0)
 			(effects
 				(font
@@ -2547,7 +2546,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e20e871-9660-462b-8365-887b673f7740")
 		(property "Reference" "C6"
-			(at 139.446 71.5553 0)
+			(at 139.446 71.1778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2555,8 +2554,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 139.446 74.0922 0)
+		(property "Value" "1uF"
+			(at 139.446 73.6021 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2564,7 +2563,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 137.4902 76.2 0)
 			(effects
 				(font
@@ -2645,7 +2644,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
 			(at 96.2152 76.2 0)
 			(effects
 				(font
@@ -3255,8 +3254,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
-			(at 113.03 74.93 0)
+		(property "Value" "10uF 25V"
+			(at 120.396 74.676 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3308,7 +3307,8 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Male")
-		(at 177.8 97.79 180)
+		(at 177.8 95.25 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3316,7 +3316,7 @@
 		(dnp no)
 		(uuid "70f9597d-0de8-4342-b113-8d742e603a45")
 		(property "Reference" "J12"
-			(at 178.5112 97.3547 0)
+			(at 178.5112 95.6853 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3325,7 +3325,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Male"
-			(at 178.5112 94.8178 0)
+			(at 178.5112 98.2222 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3334,7 +3334,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal"
-			(at 177.8 97.79 0)
+			(at 177.8 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3343,7 +3343,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 177.8 97.79 0)
+			(at 177.8 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3352,7 +3352,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 177.8 97.79 0)
+			(at 177.8 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3401,10 +3401,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8dd97335-59f8-416c-b58e-3a93a67fb7f8")
 		(property "Reference" "C5"
-			(at 129.921 90.6053 0)
+			(at 121.158 90.424 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3412,8 +3411,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22nF"
-			(at 129.921 93.1422 0)
+		(property "Value" "22nF 50V"
+			(at 114.554 92.964 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3421,7 +3420,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 127.9652 95.25 0)
 			(effects
 				(font
@@ -3558,7 +3557,7 @@
 		(fields_autoplaced yes)
 		(uuid "a9bec1ca-66b4-43bc-a740-9e3c422438da")
 		(property "Reference" "C4"
-			(at 126.746 71.5553 0)
+			(at 126.746 71.1778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3566,8 +3565,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 126.746 74.0922 0)
+		(property "Value" "1uF"
+			(at 126.746 73.6021 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3575,7 +3574,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 124.7902 76.2 0)
 			(effects
 				(font
@@ -3805,7 +3804,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 173.6852 130.81 0)
 			(effects
 				(font
