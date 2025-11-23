@@ -5,6 +5,8 @@ This is non-standard and not really advisable, so proceed at your own risk!
 
 <img height="600" alt="image" src="https://github.com/user-attachments/assets/af8fa72f-8abc-4625-8af0-c41e5df8deec" />
 
+https://youtu.be/3sF8bKx-5_M
+
 ## Features
 * ADXL345 accelerometer, with interrupt pin connected for use as a "probe"
 * TMC2209 driver for extruder motor
