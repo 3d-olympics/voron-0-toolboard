@@ -5588,7 +5588,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "OPEN"
+		(property "Value" "22k"
 			(at 161.798 81.2221 0)
 			(effects
 				(font
